@@ -24,3 +24,7 @@ transit depndency: our project has parcel as dependency but parcel could have ot
 npx parcel index.html: just like we have npm, similarly we have npx, npx means executing a package. so this command will execute parcel. we will be using this to start server.
 
 npm install react-dom@18.2.0: install dependency with version with ^ symbol.
+
+err: @parcel/transformer-js: Browser scripts cannot have imports or exports.
+   <script src = "./App.js"> </script>  we need to update this line like following
+   <script type = "module" src = "./App.js"> </script>
