@@ -1,0 +1,26 @@
+{
+  "name": "hello-react",
+  "version": "1.0.0",
+  "description": "This is hello react by Anish Kumar.",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anish-diliyan/hello-react.git"
+  },
+  "keywords": [
+    "react",
+    "namaste-react"
+  ],
+  "author": "Anish Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anish-diliyan/hello-react/issues"
+  },
+  "homepage": "https://github.com/anish-diliyan/hello-react#readme",
+  "devDependencies": {
+    "parcel": "^2.15.0"
+  }
+}
