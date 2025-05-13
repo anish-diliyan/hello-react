@@ -5,6 +5,8 @@
   "author": "Anish Kumar",
   "license": "ISC",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "browserslist": ["last 2 versions"],
