@@ -28,3 +28,11 @@ npm install react-dom@18.2.0: install dependency with version with ^ symbol.
 err: @parcel/transformer-js: Browser scripts cannot have imports or exports.
    <script src = "./App.js"> </script>  we need to update this line like following
    <script type = "module" src = "./App.js"> </script>
+
+transpilled: when you write a Jsx code then first before going to browser it will be converted in javascript by parcel using babel.
+
+Babel: Jsx ---> React Js ---> JavaScript
+
+Attributes in Jsx: If you are writting Attribute in JSx you need to use camel case.
+
+multiple line Jsx: if you are writitng Jsx in multiple line you will have to write in (Jsx Syntax).

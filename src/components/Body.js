@@ -1,20 +1,35 @@
-import RestaurentCard from "./RestaurentCard";
-import resList from "../utils/mockData";
+import ProductCard from "./ProductCard";
+import { useState, useEffect } from "react";
 
 const Body = () => {
-    console.log(Array.isArray(resList), resList);
+    const [listOfProducts, setListOfProducts] = useState([]);
+
+    const fetchProduct = async () => {
+        const response = await fetch("https://dummyjson.com/products?limit=10");
+        const data = await response.json();
+        setListOfProducts(data.products);
+    };
+
+    useEffect(() => { fetchProduct(); }, []);
+
     return (
         <div className="body">
-            <div className="search">Search</div>
-            <div className="res-container">
-               {
-                  resList.map((resturant) => (
-                    <RestaurentCard key={resturant.id} resData={resturant}/>
-                  ))
-               }
+            <div className="filter">
+                <button className="filter-btn" onClick={() => {
+                    const filteredList = listOfProducts.filter((res) => res.rating > 4);
+                    setListOfProducts(filteredList);
+                }}>Top Rated Products</button>
+            </div>
+
+            <div className="product-container">
+                {
+                    listOfProducts.map((product) => (
+                        <ProductCard key={product.id} productData={product}/>
+                    ))
+                }
             </div>
         </div>
-    )
+    );
 }
 
 export default Body;
