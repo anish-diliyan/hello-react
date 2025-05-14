@@ -1,4 +1,5 @@
 import ProductCard from "./ProductCard";
+import Shimmer from "./Shimmer";
 import { useState, useEffect } from "react";
 
 const Body = () => {
@@ -12,7 +13,7 @@ const Body = () => {
 
     useEffect(() => { fetchProduct(); }, []);
 
-    return (
+    return listOfProducts.length === 0 ? <Shimmer /> : (
         <div className="body">
             <div className="filter">
                 <button className="filter-btn" onClick={() => {
@@ -29,7 +30,8 @@ const Body = () => {
                 }
             </div>
         </div>
-    );
+    )
+    
 }
 
 export default Body;
