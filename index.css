@@ -4,6 +4,8 @@ html, body, #root, .app-root {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body {
@@ -108,7 +110,7 @@ body {
     flex: 1 1 auto;
     width: 100%;
     background: transparent;
-    padding: 3rem 0 2rem 0;
+    padding: 1rem 0 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,6 +197,7 @@ body {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 8px 24px rgba(52, 99, 255, 0.13);
     border-color: #b3c6ff;
+    cursor: pointer;
 }
 
 .product-card img {
@@ -285,5 +288,66 @@ body {
         min-height: 220px;
         max-width: 99vw;
         padding: 0.7rem 0.2rem 1rem 0.2rem;
+    }
+}
+
+/* Add to your index.css */
+.active-btn {
+    background: linear-gradient(90deg, #4f8cff 0%, #3358e6 100%) !important;
+    color: #fff !important;
+    border: none !important;
+}
+.filter-btn:not(.active-btn),
+.show-all-btn:not(.active-btn) {
+    background: #fff;
+    color: #3358e6;
+    border: 2px solid #3358e6;
+}
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    background: linear-gradient(90deg, #3358e6 0%, #4f8cff 100%);
+    color: #fff;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 16px rgba(52, 99, 255, 0.07);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.footer-content nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-content a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-content a:hover {
+    color: #dbeafe;
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .footer-content {
+        padding: 0 1rem;
+        font-size: 0.95rem;
+    }
+    .footer-content nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
     }
 }
