@@ -17,7 +17,7 @@ const Header = () => {
                     alt="App Logo"
                 />
                 <span className="app-title">
-                    Hello React
+                    Quick Shop
                 </span>
             </div>
             <nav className="nav-items">

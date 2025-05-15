@@ -1,2 +1,2 @@
 export const LOGO_URL = 
-"https://www.shutterstock.com/image-vector/logo-design-fast-shopping-trolley-260nw-2470341969.jpg"
+"https://cdn.pixabay.com/photo/2017/01/05/19/10/cart-1956097_1280.png"
