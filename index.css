@@ -83,27 +83,37 @@ body {
     position: relative;
 }
 
-.nav-items li:hover {
+.nav-items li:not(:has(button)):hover {
     background: rgba(255,255,255,0.13);
     color: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.cart-btn {
+/* Header Button Styles (Cart & Auth) */
+.header-btn {
     background: #fff;
     color: #3358e6;
-    border-radius: 20px;
-    padding: 0.4rem 1.3rem;
-    font-weight: bold;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
-    border: none;
-    transition: background 0.2s, color 0.2s;
+    border: 2px solid #3358e6;
+    border-radius: 22px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 0.7rem;
+    transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    outline: none;
+    display: inline-block;
 }
 
-.cart-btn:hover {
+.header-btn:hover {
     background: #3358e6;
     color: #fff;
+    border-color: #3358e6;
+    box-shadow: 0 2px 8px rgba(52, 99, 255, 0.13);
 }
+
+/* Remove old .cart-btn and .auth-btn blocks to avoid conflicts */
 
 /* Body Styles */
 .body {
