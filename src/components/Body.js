@@ -7,7 +7,7 @@ const Body = () => {
     const [filteredProducts, setFilteredProducts] = useState([]);
 
     const fetchProduct = async () => {
-        const response = await fetch("https://dummyjson.com/products?limit=10");
+        const response = await fetch("https://dummyjson.com/products");
         const data = await response.json();
         setListOfProducts(data.products);
         setFilteredProducts(data.products);
